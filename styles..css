@@ -1,0 +1,179 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 300px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    height: fit-content;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    background: #000;
+}
+
+.nav-links {
+    color: #666;
+    font-size: 14px;
+}
+
+.section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Project List */
+.project-list {
+    list-style: none;
+}
+
+.project-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+/* Work Experience */
+.work-experience h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.visit-link {
+    color: #0066cc;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Education */
+.course-list {
+    list-style: none;
+    margin-left: 15px;
+}
+
+.course-list li {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.course-list li:before {
+    content: "-";
+    position: absolute;
+    left: -15px;
+}
+
+/* Reviews */
+.review-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.review-author {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    border: 1px solid #ddd;
+    height: fit-content;
+}
+
+.main-content-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-grid > div {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.reviews-section {
+    padding: 20px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .main-grid, .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
